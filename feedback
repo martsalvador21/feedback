@@ -1,1 +1,101 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f5f0;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 400px;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      color: #2c662d;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      text-align: left;
+      color: #1b4d2a;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #26734d;
+    }
+    .qr-section {
+      margin-top: 25px;
+    }
+    .qr-section h3 {
+      color: #155724;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .qr-section img {
+      border: 2px solid #2e8b57;
+      border-radius: 10px;
+      padding: 5px;
+      background: #e9f7ef;
+      width: 180px;
+      height: 180px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Feedback Form</h2>
+
+    <!-- Replace form URL and entry IDs with your own Google Form IDs -->
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfyRizEmIbUH9_4tWZDleMgSuiJ7oWj7GrfXuIzSWMZuRaycA/formResponse" method="POST" target="_self" onsubmit="alert('✅ Feedback submitted successfully!');">
+      <label for="name">Your Name:</label>
+      <input type="text" name="entry.1480030154" id="name" required>
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea name="entry.2140454907" id="feedback" rows="4" required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+
+    <div class="qr-section">
+      <h3>📱 Scan to Open Google Form</h3>
+      <img src="feedback1.png" alt="QR Code">
+    </div>
+  </div>
+</body>
+</html>
